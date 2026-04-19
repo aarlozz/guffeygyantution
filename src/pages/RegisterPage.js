@@ -68,19 +68,24 @@ export default function RegisterPage() {
 
     setLoading(true);
     try {
-      // Check if student already exists by email or phone
-      const { data: existing, error: fetchErr } = await supabase
+      // ✅ Fetch all matches — avoids PGRST116 crash
+      const { data: matches, error: fetchErr } = await supabase
         .from("students")
         .select("id, full_name, attempt_count, email, phone_number")
         .or(
           `email.eq.${form.email.trim().toLowerCase()},phone_number.eq.${form.phone_number.trim()}`,
-        )
-        .maybeSingle();
+        );
 
       if (fetchErr) throw fetchErr;
 
+      // Pick best match — email takes priority over phone
+      const existing =
+        matches?.find((s) => s.email === form.email.trim().toLowerCase()) ||
+        matches?.find((s) => s.phone_number === form.phone_number.trim()) ||
+        null;
+
       if (existing) {
-        // Returning student
+        // Returning student — check attempt limit
         if (existing.attempt_count >= 2) {
           setError(
             "You have already used both your attempts. No more attempts are allowed.",
@@ -88,12 +93,12 @@ export default function RegisterPage() {
           setLoading(false);
           return;
         }
-        // Let them take next attempt
+        // Has attempts remaining — go to test
         navigate("/test", { state: { student: existing } });
         return;
       }
 
-      // New student — insert
+      // Brand new student — insert record
       const { data: newStudent, error: insertErr } = await supabase
         .from("students")
         .insert({
@@ -207,20 +212,7 @@ export default function RegisterPage() {
           <span>ℹ</span>
           <span>
             Test has <strong>100 questions</strong> · Time limit:{" "}
-            <strong>1 hour</strong> · Max <strong>2 attempts</strong>
           </span>
-        </div>
-
-        <button
-          className="btn btn-primary"
-          onClick={handleSubmit}
-          disabled={loading}
-        >
-          {loading ? "Please wait…" : "Start Test →"}
-        </button>
-
-        <div style={{ textAlign: "center", marginTop: 20 }}>
-          <a href="/leaderboard" className="btn btn-outline"></a>
         </div>
       </div>
     </div>

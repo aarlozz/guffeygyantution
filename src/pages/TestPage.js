@@ -35,83 +35,91 @@ function formatTime(seconds) {
 }
 
 const styles = {
-  wrap: { maxWidth: 800, margin: '0 auto', padding: '1.5rem 1rem', fontFamily: 'sans-serif' },
+  wrap: {
+    maxWidth: 800, margin: '0 auto', padding: '1.5rem 1rem',
+    fontFamily: 'sans-serif', background: '#0a0a0a', minHeight: '100vh',
+  },
   warningBar: {
-    background: '#FEE2E2', color: '#B91C1C', padding: '10px 16px',
+    background: '#3b0000', color: '#ff4444', padding: '10px 16px',
     borderRadius: 8, fontSize: 13, fontWeight: 500, marginBottom: 16,
-    border: '1px solid #FECACA',
+    border: '1px solid #ff2222',
   },
   header: {
     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-    marginBottom: 20, paddingBottom: 16, borderBottom: '1px solid #E5E7EB',
+    marginBottom: 20, paddingBottom: 16, borderBottom: '1px solid #2a0000',
   },
   timer: (warn) => ({
-    fontSize: 22, fontWeight: 600, fontVariantNumeric: 'tabular-nums',
-    color: warn ? '#DC2626' : '#111827',
+    fontSize: 26, fontWeight: 700, fontVariantNumeric: 'tabular-nums',
+    color: warn ? '#ff2222' : '#ff4444',
+    textShadow: warn ? '0 0 12px #ff000066' : 'none',
   }),
   violationBadge: {
     fontSize: 12, padding: '4px 10px', borderRadius: 6,
-    background: '#FEF3C7', color: '#92400E', border: '1px solid #FDE68A',
+    background: '#3b0000', color: '#ff6666', border: '1px solid #cc0000',
   },
   progressRow: { display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 },
-  progressTrack: { flex: 1, height: 4, background: '#E5E7EB', borderRadius: 4, overflow: 'hidden' },
+  progressTrack: {
+    flex: 1, height: 4, background: '#1a1a1a', borderRadius: 4, overflow: 'hidden',
+  },
   progressFill: (pct) => ({
-    height: '100%', width: `${pct}%`, background: '#2563EB',
+    height: '100%', width: `${pct}%`, background: '#cc0000',
     borderRadius: 4, transition: 'width 0.3s',
   }),
-  progressLabel: { fontSize: 12, color: '#6B7280', whiteSpace: 'nowrap' },
+  progressLabel: { fontSize: 12, color: '#666', whiteSpace: 'nowrap' },
   qCard: {
-    background: '#fff', border: '1px solid #E5E7EB', borderRadius: 12,
+    background: '#111', border: '1px solid #2a0000', borderRadius: 12,
     padding: '1.25rem 1.5rem', marginBottom: '1rem',
   },
   qHeader: { display: 'flex', gap: 12, alignItems: 'flex-start', marginBottom: '1rem' },
   qNum: (answered) => ({
     minWidth: 28, height: 28, borderRadius: '50%', display: 'flex',
-    alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 500,
+    alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 600,
     flexShrink: 0, marginTop: 2,
-    background: answered ? '#DBEAFE' : '#F3F4F6',
-    color: answered ? '#1D4ED8' : '#6B7280',
+    background: answered ? '#3b0000' : '#1a1a1a',
+    color: answered ? '#ff4444' : '#555',
+    border: answered ? '1px solid #cc0000' : '1px solid #2a2a2a',
   }),
-  qText: { fontSize: 15, color: '#111827', lineHeight: 1.65 },
+  qText: { fontSize: 15, color: '#e5e5e5', lineHeight: 1.65 },
   optGrid: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 },
   opt: (selected) => ({
     display: 'flex', alignItems: 'center', gap: 10,
     padding: '10px 14px', borderRadius: 8, cursor: 'pointer', textAlign: 'left',
-    border: selected ? '1.5px solid #2563EB' : '1px solid #D1D5DB',
-    background: selected ? '#EFF6FF' : '#fff',
+    border: selected ? '1.5px solid #cc0000' : '1px solid #2a2a2a',
+    background: selected ? '#1a0000' : '#1a1a1a',
     transition: 'all 0.15s',
   }),
   optKey: (selected) => ({
     width: 26, height: 26, borderRadius: '50%', display: 'flex',
-    alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 500,
+    alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 600,
     flexShrink: 0,
-    background: selected ? '#2563EB' : 'transparent',
-    border: selected ? '1.5px solid #2563EB' : '1.5px solid #D1D5DB',
-    color: selected ? '#fff' : '#6B7280',
+    background: selected ? '#cc0000' : 'transparent',
+    border: selected ? '1.5px solid #cc0000' : '1.5px solid #333',
+    color: selected ? '#fff' : '#555',
   }),
-  optText: { fontSize: 14, color: '#111827', lineHeight: 1.4 },
+  optText: { fontSize: 14, color: '#ccc', lineHeight: 1.4 },
   pagination: {
     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-    marginTop: 24, paddingTop: 16, borderTop: '1px solid #E5E7EB',
+    marginTop: 24, paddingTop: 16, borderTop: '1px solid #2a0000',
   },
   btn: {
-    padding: '8px 20px', border: '1px solid #D1D5DB', borderRadius: 8,
-    background: '#fff', fontSize: 14, cursor: 'pointer', color: '#374151',
+    padding: '8px 20px', border: '1px solid #2a2a2a', borderRadius: 8,
+    background: '#1a1a1a', fontSize: 14, cursor: 'pointer', color: '#aaa',
   },
   btnSubmit: {
-    padding: '8px 20px', borderRadius: 8, fontSize: 14, fontWeight: 500,
-    cursor: 'pointer', background: '#2563EB', color: '#fff', border: 'none',
+    padding: '8px 24px', borderRadius: 8, fontSize: 14, fontWeight: 600,
+    cursor: 'pointer', background: '#cc0000', color: '#fff', border: 'none',
+    letterSpacing: '0.3px',
   },
   confirmOverlay: {
-    position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.4)',
+    position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.85)',
     display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999,
   },
   confirmBox: {
-    background: '#fff', borderRadius: 12, padding: '2rem', maxWidth: 360, width: '90%',
-    boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+    background: '#111', borderRadius: 12, padding: '2rem', maxWidth: 360, width: '90%',
+    border: '1px solid #cc0000',
   },
-  confirmTitle: { fontSize: 16, fontWeight: 600, marginBottom: 8 },
-  confirmText: { fontSize: 14, color: '#6B7280', marginBottom: 20, lineHeight: 1.5 },
+  confirmTitle: { fontSize: 16, fontWeight: 600, marginBottom: 8, color: '#fff' },
+  confirmText: { fontSize: 14, color: '#888', marginBottom: 20, lineHeight: 1.5 },
   confirmBtns: { display: 'flex', gap: 10, justifyContent: 'flex-end' },
 };
 
@@ -209,12 +217,19 @@ export default function TestPage() {
 
   const handleSelect = (idx, opt) => setAnswers((prev) => ({ ...prev, [idx]: opt }));
 
-  if (loading) return <div style={{ padding: '2rem', textAlign: 'center' }}>Loading questions…</div>;
-  if (error) return <div style={{ padding: '2rem', color: '#DC2626' }}>{error}</div>;
+  if (loading) return (
+    <div style={{ padding: '2rem', textAlign: 'center', background: '#0a0a0a', minHeight: '100vh', color: '#cc0000', fontSize: 16 }}>
+      Loading questions…
+    </div>
+  );
+  if (error) return (
+    <div style={{ padding: '2rem', color: '#ff4444', background: '#0a0a0a', minHeight: '100vh' }}>
+      {error}
+    </div>
+  );
 
   const pageStart = currentPage * PER_PAGE;
-  const pageEnd = pageStart + PER_PAGE;
-  const pageQuestions = questions.slice(pageStart, pageEnd);
+  const pageQuestions = questions.slice(pageStart, pageStart + PER_PAGE);
   const totalPages = Math.ceil(questions.length / PER_PAGE);
   const answeredCount = Object.keys(answers).length;
   const progressPct = Math.round((answeredCount / questions.length) * 100);
@@ -224,7 +239,6 @@ export default function TestPage() {
     <div style={styles.wrap}>
       {warning && <div style={styles.warningBar}>⚠ {warning}</div>}
 
-      {/* Header */}
       <div style={styles.header}>
         <span style={styles.timer(timeLeft < 300)}>{formatTime(timeLeft)}</span>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -232,12 +246,11 @@ export default function TestPage() {
             <span style={styles.violationBadge}>Violations: {violations}/3</span>
           )}
           <button style={styles.btnSubmit} onClick={() => setShowConfirm(true)} disabled={submitting}>
-            {submitting ? 'Submitting…' : 'Submit test'}
+            {submitting ? 'Submitting…' : 'Submit Test'}
           </button>
         </div>
       </div>
 
-      {/* Progress bar */}
       <div style={styles.progressRow}>
         <div style={styles.progressTrack}>
           <div style={styles.progressFill(progressPct)} />
@@ -245,7 +258,6 @@ export default function TestPage() {
         <span style={styles.progressLabel}>{answeredCount} of {questions.length} answered</span>
       </div>
 
-      {/* Questions */}
       {pageQuestions.map((q, i) => {
         const idx = pageStart + i;
         const selected = answers[idx];
@@ -271,7 +283,6 @@ export default function TestPage() {
         );
       })}
 
-      {/* Pagination */}
       <div style={styles.pagination}>
         <button
           style={styles.btn}
@@ -280,7 +291,7 @@ export default function TestPage() {
         >
           ← Previous
         </button>
-        <span style={{ fontSize: 13, color: '#6B7280' }}>
+        <span style={{ fontSize: 13, color: '#555' }}>
           Page {currentPage + 1} of {totalPages}
         </span>
         <button
@@ -292,7 +303,6 @@ export default function TestPage() {
         </button>
       </div>
 
-      {/* Confirm modal */}
       {showConfirm && (
         <div style={styles.confirmOverlay}>
           <div style={styles.confirmBox}>
@@ -305,7 +315,7 @@ export default function TestPage() {
             <div style={styles.confirmBtns}>
               <button style={styles.btn} onClick={() => setShowConfirm(false)}>Cancel</button>
               <button style={styles.btnSubmit} onClick={() => { setShowConfirm(false); submitAttempt(answers); }}>
-                Yes, submit
+                Yes, Submit
               </button>
             </div>
           </div>
