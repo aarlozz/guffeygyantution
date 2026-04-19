@@ -223,6 +223,26 @@ export default function RegisterPage() {
           </button>
         </div>
       </div>
+      <div
+        className="msg msg-error"
+        style={{ borderRadius: "8px", padding: "1rem" }}
+      >
+        <strong>📋 Rules</strong>
+        <ul
+          style={{ margin: "0.5rem 0 0 1.2rem", padding: 0, lineHeight: "1.8" }}
+        >
+          <li>
+            You are allowed <strong>only 1 attempt</strong>.
+          </li>
+          <li>
+            Do <strong>not</strong> exit fullscreen during the test.
+          </li>
+          <li>
+            Do <strong>not</strong> visit other websites or switch tabs.
+          </li>
+          <li>Do not refresh or press the Back button.</li>
+        </ul>
+      </div>
     </div>
   );
 }
