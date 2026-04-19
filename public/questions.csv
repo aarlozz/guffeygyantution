@@ -1,5 +1,4 @@
 sn,question,optionA,optionB,optionC,optionD,answer
-
 1,Which SQL command retrieves data from a table?,INSERT,UPDATE,SELECT,FETCH,C
 2,Which SQL command adds a new row to a table?,ADD ROW,INSERT INTO,CREATE ROW,UPDATE,B
 3,Which SQL command modifies existing data?,MODIFY,CHANGE,ALTER,UPDATE,D
