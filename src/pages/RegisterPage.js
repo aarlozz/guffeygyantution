@@ -213,6 +213,14 @@ export default function RegisterPage() {
           <span>
             Test has <strong>100 questions</strong> · Time limit:{" "}
           </span>
+
+          <button
+            className="btn btn-primary"
+            onClick={handleSubmit}
+            disabled={loading}
+          >
+            {loading ? "Please wait…" : "Start Test →"}
+          </button>
         </div>
       </div>
     </div>
