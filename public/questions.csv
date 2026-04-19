@@ -1,0 +1,32 @@
+sn,question,optionA,optionB,optionC,optionD,answer
+
+1,Which SQL command retrieves data from a table?,INSERT,UPDATE,SELECT,FETCH,C
+2,Which SQL command adds a new row to a table?,ADD ROW,INSERT INTO,CREATE ROW,UPDATE,B
+3,Which SQL command modifies existing data?,MODIFY,CHANGE,ALTER,UPDATE,D
+4,Which SQL command removes specific rows?,REMOVE,DROP,DELETE,ERASE,C
+5,Which SQL command creates a new database?,MAKE DATABASE,NEW DATABASE,CREATE DATABASE,BUILD DATABASE,C
+6,Which SQL command creates a new table?,MAKE TABLE,CREATE TABLE,ADD TABLE,BUILD TABLE,B
+7,Which PHP function fetches a result row as an associative array?,mysqli_fetch_row(),mysqli_get_array(),mysqli_fetch_assoc(),mysqli_read(),C
+8,Which PHP function executes a SQL query?,mysqli_run(),mysqli_execute(),mysqli_query(),mysqli_send(),C
+9,Which PHP function closes a database connection?,mysqli_end(),mysqli_stop(),mysqli_disconnect(),mysqli_close(),D
+10,What does die do in PHP?,Deletes the database,Terminates the script with an optional message,Closes the browser,Logs out the user,B
+11,The correct order of PHP MySQL operations is:,Query Connect Fetch Close,Connect Query Fetch Close,Fetch Connect Query Close,Close Connect Query Fetch,B
+12,Which SQL clause filters records based on a condition?,ORDER BY,GROUP BY,WHERE,HAVING,C
+13,Which SQL clause sorts results?,WHERE,GROUP BY,ORDER BY,FILTER BY,C
+14,Which PHP function returns the number of rows in a result?,mysqli_count(),mysqli_rows(),mysqli_num_rows(),mysqli_total(),C
+15,To display all data from a table which SQL query is correct?,GET * FROM tablename,SELECT ALL tablename,SELECT * FROM tablename,FETCH * FROM tablename,C
+16,Which function checks if the query executed successfully?,Checking if mysqli_query returns TRUE FALSE,mysqli_check(),mysqli_verify(),mysqli_test(),A
+17,To connect to a MySQL database named school which is correct?,mysqli_connect localhost root school,mysqli_connect school localhost root,mysql_connect localhost school,db_connect school,A
+18,Which HTML tag is used to display data in a table format?,<list>,<table>,<grid>,<data>,B
+19,In a PHP MySQL fetch loop the loop continues until:,The database closes,All rows have been fetched returns NULL FALSE,The user closes the browser,100 rows are fetched,B
+20,SQL stands for:,Structured Query Language,Simple Query Language,Sequential Query Language,System Query Language,A
+21,Which SQL keyword removes duplicate values in results?,UNIQUE,DISTINCT,NODUPLICATE,FILTER,B
+22,Which SQL statement limits the number of rows returned?,TOP,MAX,LIMIT,FILTER,C
+23,A PRIMARY KEY in SQL:,Can be null,Can have duplicates,Must be unique and not null,Is optional in every table,C
+24,Which SQL aggregate function counts rows?,SUM(),COUNT(),TOTAL(),NUMBER(),B
+25,AUTO_INCREMENT in MySQL:,Automatically backs up data,Automatically increases the value of a column for each new row,Automatically creates tables,Automatically connects to the database,B
+26,Which of the following is the correct SQL syntax to insert a record?,INSERT tablename VALUES,INSERT INTO tablename VALUES,ADD INTO tablename VALUES,PUT INTO tablename,B
+27,To update a student age to 18 where StudentID is 5:,UPDATE students SET age 18 WHERE StudentID 5,CHANGE students SET age 18 WHERE StudentID 5,MODIFY students age 18 WHERE StudentID 5,UPDATE students SET age=18 WHERE StudentID=5,D
+28,Which PHP error handling practice is best when opening a DB connection?,Ignore errors,Use or die to stop and show an error message,Refresh the page,Use echo only,B
+29,Which SQL function returns the highest value in a column?,HIGH(),GREATEST(),MAX(),TOP(),C
+30,To delete all records from a table without dropping it use:,DROP TABLE,DELETE TABLE,DELETE FROM tablename without WHERE,REMOVE TABLE,Cnit,Central Processor Utility,A
