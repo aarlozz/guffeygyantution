@@ -1,31 +1,101 @@
 sn,question,optionA,optionB,optionC,optionD,answer
 1,Which SQL command retrieves data from a table?,INSERT,UPDATE,SELECT,FETCH,C
-2,Which SQL command adds a new row to a table?,ADD ROW,INSERT INTO,CREATE ROW,UPDATE,B
-3,Which SQL command modifies existing data?,MODIFY,CHANGE,ALTER,UPDATE,D
-4,Which SQL command removes specific rows?,REMOVE,DROP,DELETE,ERASE,C
-5,Which SQL command creates a new database?,MAKE DATABASE,NEW DATABASE,CREATE DATABASE,BUILD DATABASE,C
-6,Which SQL command creates a new table?,MAKE TABLE,CREATE TABLE,ADD TABLE,BUILD TABLE,B
-7,Which PHP function fetches a result row as an associative array?,mysqli_fetch_row(),mysqli_get_array(),mysqli_fetch_assoc(),mysqli_read(),C
-8,Which PHP function executes a SQL query?,mysqli_run(),mysqli_execute(),mysqli_query(),mysqli_send(),C
-9,Which PHP function closes a database connection?,mysqli_end(),mysqli_stop(),mysqli_disconnect(),mysqli_close(),D
-10,What does die do in PHP?,Deletes the database,Terminates the script with an optional message,Closes the browser,Logs out the user,B
-11,The correct order of PHP MySQL operations is:,Query Connect Fetch Close,Connect Query Fetch Close,Fetch Connect Query Close,Close Connect Query Fetch,B
-12,Which SQL clause filters records based on a condition?,ORDER BY,GROUP BY,WHERE,HAVING,C
-13,Which SQL clause sorts results?,WHERE,GROUP BY,ORDER BY,FILTER BY,C
-14,Which PHP function returns the number of rows in a result?,mysqli_count(),mysqli_rows(),mysqli_num_rows(),mysqli_total(),C
-15,To display all data from a table which SQL query is correct?,GET * FROM tablename,SELECT ALL tablename,SELECT * FROM tablename,FETCH * FROM tablename,C
-16,Which function checks if the query executed successfully?,Checking if mysqli_query returns TRUE FALSE,mysqli_check(),mysqli_verify(),mysqli_test(),A
-17,To connect to a MySQL database named school which is correct?,mysqli_connect localhost root school,mysqli_connect school localhost root,mysql_connect localhost school,db_connect school,A
-18,Which HTML tag is used to display data in a table format?,<list>,<table>,<grid>,<data>,B
-19,In a PHP MySQL fetch loop the loop continues until:,The database closes,All rows have been fetched returns NULL FALSE,The user closes the browser,100 rows are fetched,B
-20,SQL stands for:,Structured Query Language,Simple Query Language,Sequential Query Language,System Query Language,A
-21,Which SQL keyword removes duplicate values in results?,UNIQUE,DISTINCT,NODUPLICATE,FILTER,B
-22,Which SQL statement limits the number of rows returned?,TOP,MAX,LIMIT,FILTER,C
-23,A PRIMARY KEY in SQL:,Can be null,Can have duplicates,Must be unique and not null,Is optional in every table,C
-24,Which SQL aggregate function counts rows?,SUM(),COUNT(),TOTAL(),NUMBER(),B
-25,AUTO_INCREMENT in MySQL:,Automatically backs up data,Automatically increases the value of a column for each new row,Automatically creates tables,Automatically connects to the database,B
-26,Which of the following is the correct SQL syntax to insert a record?,INSERT tablename VALUES,INSERT INTO tablename VALUES,ADD INTO tablename VALUES,PUT INTO tablename,B
-27,To update a student age to 18 where StudentID is 5:,UPDATE students SET age 18 WHERE StudentID 5,CHANGE students SET age 18 WHERE StudentID 5,MODIFY students age 18 WHERE StudentID 5,UPDATE students SET age=18 WHERE StudentID=5,D
-28,Which PHP error handling practice is best when opening a DB connection?,Ignore errors,Use or die to stop and show an error message,Refresh the page,Use echo only,B
-29,Which SQL function returns the highest value in a column?,HIGH(),GREATEST(),MAX(),TOP(),C
-30,To delete all records from a table without dropping it use:,DROP TABLE,DELETE TABLE,DELETE FROM tablename without WHERE,REMOVE TABLE,Cnit,Central Processor Utility,A
+2,Which keyword creates a new object in PHP?,object,create,new,make,C
+3,Which file mode opens a file for reading only?,"w","a","r","rw",C
+4,Which SQL command modifies existing data?,MODIFY,CHANGE,ALTER,UPDATE,D
+5,Which PHP function connects to a MySQL database?,db_connect(),mysql_open(),mysqli_connect(),connect_mysql(),C
+6,What does NaN mean?,Not a Null,Not a Number,Negative and Normal,New and Null,B
+7,Which SQL clause filters records based on a condition?,ORDER BY,GROUP BY,WHERE,HAVING,C
+8,Which operator gives the address of a variable?,*,#,&,@,C
+9,Which PHP loop iterates over each element of an array?,for,while,foreach,do-while,C
+10,What is the base case in recursion?,The first call to the function,The condition that stops the recursion,The last line of the function,The return type,B
+11,Which SQL command adds a new row to a table?,ADD ROW,INSERT INTO,CREATE ROW,UPDATE,B
+12,Which SQL command creates a new database?,MAKE DATABASE,NEW DATABASE,CREATE DATABASE,BUILD DATABASE,C
+13,Which SQL command removes specific rows?,REMOVE,DROP,DELETE,ERASE,C
+14,Which SQL command creates a new table?,MAKE TABLE,CREATE TABLE,ADD TABLE,BUILD TABLE,B
+15,Which SQL clause sorts results?,WHERE,GROUP BY,ORDER BY,FILTER BY,C
+16,Which SQL aggregate function counts rows?,SUM(),COUNT(),TOTAL(),NUMBER(),B
+17,Which SQL keyword removes duplicate values in results?,UNIQUE,DISTINCT,NODUPLICATE,FILTER,B
+18,Which SQL statement limits the number of rows returned?,TOP,MAX,LIMIT,FILTER,C
+19,Which SQL function returns the highest value in a column?,HIGH(),GREATEST(),MAX(),TOP(),C
+20,Which SQL command permanently saves a transaction?,SAVE,COMMIT,ROLLBACK,END,B
+21,Which SQL command undoes a transaction?,UNDO,CANCEL,ROLLBACK,REVERT,C
+22,Which SQL command deletes all records without dropping table?,DROP TABLE,DELETE TABLE,DELETE FROM tablename (without WHERE),REMOVE TABLE,C
+23,Which of the following is a client-side scripting language?,PHP,Python,JavaScript,Ruby,C
+24,What is a Promise in JavaScript?,A guarantee that code will never fail,An object representing the eventual completion or failure of an async operation,A type of function,A variable type,B
+25,What does JSON.stringify() do?,Parses a JSON string into an object,Converts a JavaScript object into a JSON string,Validates JSON format,Encrypts JSON data,B
+26,Which operator accesses the value stored at a pointer's address?,&,#,*,->,D
+27,If int x = 10; int *p = &x; then *p equals:,Address of x,Address of p,10,0,C
+28,What is a null pointer?,A pointer to zero,A pointer that points to nothing/NULL,A pointer to a string,An uninitialized integer,B
+29,Which of the following correctly declares a pointer to an integer?,int p*;,pointer int p;,int *p;,int &p;,C
+30,Which function opens a file in C?,openfile(),fileopen(),fopen(),open(),C
+31,Which function closes a file in C?,close(),fileclose(),fclose(),endfile(),C
+32,What does fopen() return if file cannot be opened?,0,-1,NULL,FALSE,C
+33,Which file mode creates new file for writing?,r,a,w,r+,C
+34,Which file mode appends data?,r,w,a,x,C
+35,Which function reads a character from a file?,getc(),Read,Write,Pointer,A
+36,Which function writes a character to a file?,getc(),Read,putc(),Open,C
+37,Which PHP function fetches a result row as an associative array?,mysqli_fetch_row(),mysqli_get_array(),mysqli_fetch_assoc(),mysqli_read(),C
+38,Which PHP function prepares a SQL statement to prevent SQL injection?,mysqli_query(),mysqli_prepare(),mysqli_safe(),mysqli_secure(),B
+39,Prepared statements in PHP prevent:,Database connection errors,SQL injection attacks,Syntax errors,PHP errors,B
+40,Which PHP function checks if a variable is set and not null?,exists(),isset(),defined(),check(),B
+41,Which PHP function checks if a variable is empty?,isnull(),isempty(),empty(),blank(),C
+42,Which PHP function finds the length of a string?,length(),strlen(),strcount(),size(),B
+43,Which PHP function converts a string to uppercase?,uppercase(),toUpper(),strtoupper(),strupper(),C
+44,Which PHP function removes whitespace from both ends of a string?,clean(),strip(),trim(),clear(),C
+45,Which PHP superglobal stores session data?,$_POST,$_SESSION,$_COOKIE,$_SERVER,B
+46,Which keyword is used for inheritance in PHP?,inherits,implements,extends,derives,C
+47,Which PHP arithmetic operator gives the remainder?,/,//,%,^,C
+48,Which operator concatenates strings in PHP?,+,&,.,*,C
+49,Which operator checks value AND type equality in PHP?,==,=,===,<>,C
+50,Which of the following anomalies does normalization help eliminate?,Syntax anomaly,Insertion deletion and update anomalies,Hardware anomalies,Network anomalies,B
+51,A database is:,A single file storing programs,An organized collection of related data,A type of operating system,A hardware device,B
+52,DBMS stands for:,Data Backup Management System,Digital Base Management Software,Database Management System,Data Business Management System,C
+53,Data redundancy means:,Data is secure,Same data is stored in multiple places unnecessarily,Data is well organized,Data is encrypted,B
+54,Which key uniquely identifies each record in a table?,Alternate Key,Foreign Key,Primary Key,Composite Key,C
+55,DDL stands for:,Data Display Language,Data Definition Language,Digital Definition Language,Data Deletion Language,B
+56,Which command is used to delete an entire table structure?,DELETE,REMOVE,DROP,TRUNCATE,C
+57,Which normal form eliminates partial dependency?,1NF,2NF,3NF,BCNF,B
+58,Which normal form eliminates transitive dependency?,1NF,2NF,3NF,4NF,C
+59,In simplex transmission data flows:,In both directions simultaneously,In one direction only,In alternating directions,In multiple paths,B
+60,A walkie-talkie uses which mode of transmission?,Simplex,Full duplex,Half duplex,Multiplexed,C
+61,Full duplex allows:,One-way communication,Alternating two-way communication,Simultaneous two-way communication,No communication,C
+62,Which guided medium is most immune to electromagnetic interference?,Twisted pair cable,Coaxial cable,Fiber optic cable,Power line,C
+63,Fiber optic cable transmits data using:,Electrical signals,Radio waves,Light pulses,Magnetic fields,C
+64,NIC stands for:,Network Internet Card,Network Interface Card,Node Interface Controller,Network Integration Component,B
+65,A router is used to:,Connect devices within a LAN only,Convert signals from digital to analog,Route data packets between different networks,Provide wireless signals only,C
+66,In star topology all devices are connected to:,Each other directly,A single backbone cable,A central hub or switch,A ring,C
+67,OSI stands for:,Open Software Interface,Open Systems Interconnection,Operating System Integration,Open Signal Interface,B
+68,Which OSI layer handles routing of packets?,Physical,Data Link,Network,Transport,C
+69,HTTP and FTP operate at which OSI layer?,Transport,Network,Session,Application,D
+70,Which of the following is a client-side scripting language?,PHP,Python,JavaScript,Ruby,C
+71,Which keyword is used to declare a constant in JavaScript?,var,let,const,static,C
+72,Which loop is guaranteed to execute at least once?,for,while,do-while,foreach,C
+73,Which keyword exits a loop immediately?,exit,stop,break,return,C
+74,PHP stands for (currently):,Personal Home Page,Hypertext Preprocessor,Programming Hypertext Page,Public Home Processor,B
+75,Which is the correct PHP opening tag?,<php>,<?php,<#php,<%php,B
+76,In PHP all variables start with:,@,#,$,&,C
+77,Which PHP loop iterates over each element of an array?,for,while,foreach,do-while,C
+78,Which keyword creates a new object in PHP?,object,create,new,make,C
+79,Which PHP function connects to a MySQL database?,db_connect(),mysql_open(),mysqli_connect(),connect_mysql(),C
+80,Which PHP function fetches a result row as an associative array?,mysqli_fetch_row(),mysqli_get_array(),mysqli_fetch_assoc(),mysqli_read(),C
+81,A function that calls itself is called:,Inline function,Nested function,Recursive function,Static function,C
+82,What is the base case in recursion?,The first call to the function,The condition that stops the recursion,The last line of the function,The return type,B
+83,Which storage class retains a variable value between function calls?,auto,extern,static,register,C
+84,A structure in C is defined using the keyword:,class,object,struct,record,C
+85,A pointer in C is a variable that stores:,A data value,A memory address,A function name,A file name,B
+86,Which operator gives the address of a variable?,*,#,&,@,C
+87,Which function opens a file in C?,openfile(),fileopen(),fopen(),open(),C
+88,Which OOP concept allows a child class to acquire properties of a parent class?,Encapsulation,Polymorphism,Inheritance,Abstraction,C
+89,A functional dependency X→Y is trivial if:,X and Y are unrelated,Y is a subset of X,X is a subset of Y,X and Y are both primary keys,B
+90,Which file mode opens a file for reading only?,"w","a","r","rw",C
+91,What is the time complexity of recursive Fibonacci without memoization?,O(n),O(n log n),O(2ⁿ),O(n²),C
+92,Tail recursion is:,Recursion with no base case,Recursion where the recursive call is the last operation in the function,Recursion that calls two functions,Recursion using loops,B
+93,malloc() in C is used to:,Declare a variable,Allocate memory dynamically on the heap at runtime,Free memory,Create a pointer,B
+94,calloc() differs from malloc() in that:,calloc allocates less memory,calloc initializes allocated memory to zero; malloc does not,malloc initializes to zero,They are identical,B
+95,const int *p means:,The pointer cannot be changed,The value pointed to by p cannot be changed,Both pointer and value are constant,Neither is constant,B
+96,Good software design aims for:,High coupling and low cohesion,Low coupling and high cohesion,High coupling and high cohesion,Low coupling and low cohesion,B
+97,Which of the following correctly declares a pointer to an integer?,int p*;,pointer int p;,int *p;,int &p;,C
+98,What is a null pointer?,A pointer to zero,A pointer that points to nothing/NULL,A pointer to a string,An uninitialized integer,B
+99,Which operator gives the address of a variable?,*,#,&,@,C
+100,Which operator accesses the value stored at a pointer's address?,&,#,*,->,D
