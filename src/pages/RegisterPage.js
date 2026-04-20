@@ -211,7 +211,7 @@ export default function RegisterPage() {
         <div className="msg msg-info">
           <span>ℹ</span>
           <span>
-            Test has <strong>100 questions</strong> · Time limit: 1 hour{" "}
+            Test has <strong>100 questions</strong> · Time limit:45 min{" "}
           </span>
 
           <button
