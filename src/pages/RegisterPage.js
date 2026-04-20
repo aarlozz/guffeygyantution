@@ -211,7 +211,7 @@ export default function RegisterPage() {
         <div className="msg msg-info">
           <span>ℹ</span>
           <span>
-            Test has <strong>100 questions</strong> · Time limit:{" "}
+            Test has <strong>100 questions</strong> · Time limit: 1 hour{" "}
           </span>
 
           <button
@@ -223,17 +223,31 @@ export default function RegisterPage() {
           </button>
         </div>
       </div>
-      <div className="msg msg-error" style={{ borderRadius: "8px", padding: "1.5rem", marginTop: "1.5rem", lineHeight: "2" }}>
-  <strong>📋 Rules</strong>
-  <ul style={{ margin: "0.75rem 0 0 1.2rem", padding: 0, lineHeight: "2" }}>
-    <li>You are allowed <strong>only 1 attempt</strong>.</li>
-    <li>Do <strong>not</strong> exit fullscreen during the test.</li>
-    <li>Do <strong>not</strong> visit other websites or switch tabs.</li>
-    <li>Do not refresh or press the Back button.</li>
-  </ul>
-</div>
-      
+      <div
+        className="msg msg-error"
+        style={{
+          borderRadius: "8px",
+          padding: "1.5rem",
+          marginTop: "1.5rem",
+          lineHeight: "2",
+        }}
+      >
+        <strong>📋 Rules</strong>
+        <ul
+          style={{ margin: "0.75rem 0 0 1.2rem", padding: 0, lineHeight: "2" }}
+        >
+          <li>
+            You are allowed <strong>only 1 attempt</strong>.
+          </li>
+          <li>
+            Do <strong>not</strong> exit fullscreen during the test.
+          </li>
+          <li>
+            Do <strong>not</strong> visit other websites or switch tabs.
+          </li>
+          <li>Do not refresh or press the Back button.</li>
+        </ul>
+      </div>
     </div>
-    
   );
 }
